@@ -1,0 +1,6 @@
+# Copy this file to .dev.vars only for local testing. Never commit .dev.vars.
+BALE_TOKEN="eyJ..."
+BARK_URL="https://api.day.app/your-device-key"
+ADMIN_TOKEN="replace-with-a-long-random-value"
+
+

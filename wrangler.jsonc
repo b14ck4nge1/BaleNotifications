@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bale-notifications",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-14",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BALE_RELAY",
+        "class_name": "BaleRelay"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["BaleRelay"]
+    }
+  ],
+  "triggers": {
+    "crons": ["*/1 * * * *"]
+  },
+  "vars": {
+    "BALE_WS_URL": "https://next-ws.bale.ai/ws/",
+    "BARK_GROUP": "BaleNotifications",
+    "NOTIFY_CHAT_TYPES": "1",
+    "MESSAGE_PREVIEW": "true",
+    "AUTO_START": "true"
+  }
+}

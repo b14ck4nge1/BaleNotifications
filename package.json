@@ -1,0 +1,15 @@
+{
+  "name": "bale-notifications",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx wrangler@latest dev",
+    "deploy": "npx wrangler@latest deploy",
+    "logs": "npx wrangler@latest tail",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
